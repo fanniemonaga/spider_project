@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spider Craft Project</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdf6e3;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #ffcc99;
+      padding: 1rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .materials img {
+      width: 60px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .countdown {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #b22222;
+    }
+    .checklist input {
+      margin-right: 10px;
+    }
+    .checklist label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    iframe {
+      width: 100%;
+      height: 480px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🕷️ Spider Craft Project 🕷️</h1>
+  <p class="countdown" id="countdown">Loading countdown...</p>
+</header>
+
+<div class="container">
+
+  <div class="section materials">
+    <h2>🎨 Materials Needed</h2>
+    <p><img src="https://cdn-icons-png.flaticon.com/512/5426/5426381.png" alt="Tumbler" /> Paper tumbler</p>
+    <p><img src="https://cdn-icons-png.flaticon.com/512/1088/1088537.png" alt="Pipe Cleaner" /> Pipe cleaners</p>
+    <p><img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Paint" /> Paint</p>
+    <p><img src="https://cdn-icons-png.flaticon.com/512/912/912122.png" alt="String" /> 30 cm string</p>
+    <p><img src="https://cdn-icons-png.flaticon.com/512/481/481960.png" alt="Eyes" /> Buttons or googly eyes</p>
+  </div>
+
+  <div class="section checklist">
+    <h2>☑️ Materials Checklist</h2>
+    <label><input type="checkbox"> Paper tumbler</label>
+    <label><input type="checkbox"> Pipe cleaners</label>
+    <label><input type="checkbox"> Paint</label>
+    <label><input type="checkbox"> String (30 cm)</label>
+    <label><input type="checkbox"> Buttons or googly eyes</label>
+  </div>
+
+  <div class="section video">
+    <h2>🛠️ How to Make Your Spider</h2>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/QXJWQxX6m_k" title="Paper cup SPIDER |How to make spider for kids craft |School Craft|" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+</div>
+
+<!--<script>
+  // Countdown to next Friday
+  function updateCountdown() {
+    const now = new Date();
+    let target = new Date();
+    target.setDate(now.getDate() + ((5 + 7 - now.getDay()) % 7 || 7)); // next Friday
+    target.setHours(9, 0, 0, 0); // 9:00 AM
+
+    const diff = target - now;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("countdown").textContent =
+      `Project starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>-->
+<script>
+  function updateCountdown() {
+    const now = new Date();
+    const target = new Date("2025-05-30T09:00:00+02:00"); // May 30, 2025, 9:00 AM SAST
+
+    const diff = target - now;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("countdown").textContent =
+      `Project starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+</body>
+</html>
