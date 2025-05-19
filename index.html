@@ -86,7 +86,7 @@
 
 </div>
 
-<!--<script>
+<script>
   // Countdown to next Friday
   function updateCountdown() {
     const now = new Date();
@@ -106,25 +106,8 @@
 
   setInterval(updateCountdown, 1000);
   updateCountdown();
-</script>-->
-<script>
-  function updateCountdown() {
-    const now = new Date();
-    const target = new Date("2025-05-30T09:00:00+02:00"); // May 30, 2025, 9:00 AM SAST
-
-    const diff = target - now;
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    document.getElementById("countdown").textContent =
-      `Project starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
 </script>
+
 
 </body>
 </html>
